@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
+
+/* Fonts */
+@font-face {
+  font-family: 'AntroVectra';
+  src: url('./fonts/Antro_Vectra.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('./fonts/Futura Maxi CG Bold Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CalSans';
+  src: url('./fonts/CalSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset Properties */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Main */
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+/* Firefox */
+main {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a #f0f0f0;
+}
+
+/* Chrome / Safari / Edge */
+main::-webkit-scrollbar {
+  width: 4px;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #ffd323;
+  border-radius: 9999px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background-color: #e6bc00;
+}
+
+/* Hide on mobile — touch navigation doesn't need it */
+@media (max-width: 900px) {
+  main {
+    scrollbar-width: none;
+  }
+  main::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.intro {
+  width: stretch;
+  height: 100vh;
+  position: relative;
+  background-image: url('/assets/1_bkg.png');
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.intro nav {
+  position: absolute;
+  top: 0%;
+  width: 80%;
+  height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 75px;
+
+  align-items: center;
+  font-family: 'CalSans';
+  font-size: 24px;
+  font-weight: bold;
+  color: #282828;
+  text-align: end;
+  letter-spacing: -0.1px;
+}
+
+.doodleBkg {
+  width: 600px;
+  height: auto;
+}
+
+.doodle {
+  width: 750px;
+  height: auto;
+  position: absolute;
+  margin-right: 27.5%;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  margin-left: -3%;
+  margin-top: -10%;
+}
+
+.introText h1 {
+  font-family: 'Futura';
+  font-size: 118px;
+  color: #282828;
+  line-height: 90%;
+}
+
+.introText h2 {
+  position: absolute;
+  font-family: 'AntroVectra';
+  font-size: 54px;
+  color: #ff3f3f;
+  top: 33%;
+  right: 15%;
+
+}
+
+.introText p {
+  font-family: 'CalSans';
+  font-size: 36px;
+  color: #282828;
+  text-align: end;
+  letter-spacing: -1px;
+  line-height: 50%;
+}
+
+/**********************/
+.projects {
+  width: stretch;
+  height: 100vh;
+  position: relative;
+  background-image: url('/assets/2_bkg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects nav {
+  height: 10%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 1.5%;
+}
+
+.projects nav p {
+  font-family: 'Cal Sans';
+  font-size: 48px;
+  font-weight: 100;
+  color: #282828;
+  text-align: left;
+  line-height: 36px;
+  letter-spacing: -1.5px;
+  margin-top: 5%;
+}
+
+.projectsMain {
+  width: 100vw;
+  max-width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsWindow {
+  width: 75%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.projectsNav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.projectsNav img {
+  width: 40px;
+  height: auto;
+  margin: 10px 0
+}
+
+.projNavItem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #303030;
+  border-right: 1px solid rgb(105, 105, 105);
+  cursor: pointer;
+}
+
+.projectsOverview {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: url('/assets/2_projects_bkg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 3%;
+  padding-left: 0% !important;
+  overflow: hidden;
+}
+
+.projectsImage {
+  width: 70%;
+  height: 100%;
+  background-color: rgb(255, 0, 0, 0.0);
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden !important;
+}
+
+.projectsDoodle {
+  position: absolute;
+  width: 35%;
+  height: auto;
+  padding-top: 50px;
+  padding-left: 75px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 15px !important;
+  padding-bottom: 40px !important;
+}
+
+.swiper-slide {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-slide img {
+  border: 3px solid #2b2b2b;
+  border-radius: 20px;;
+  box-sizing: border-box;
+
+}
+
+.swiper-pagination {
+  margin-bottom: 5%;
+}
+
+.swiper-pagination-bullet {
+  background: #2b2b2b !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffd323 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #2b2b2b !important;
+  top: 45% !important;
+}
+
+
+.projectsSummary {
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+
+}
+
+.projectsSummaryLogo {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
+.projectsSummaryLogo img {
+  width: auto;
+  margin-top: -25px;
+  
+}
+
+.projTags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.projTag {
+  min-width: 100px;
+  padding: 5px 10px;
+  background-color: rgb(71, 71, 71);
+  border-radius: 9999px;
+
+  font-size: 18px;
+  font-family: 'Spline Sans';
+  color: white;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+.projectsSummaryDesc {
+  height: 70%;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.projDesc {
+  font-size: 24px;
+  font-family: 'Spline Sans';
+  margin-bottom: 5%;
+}
+
+.repoBtn {
+  width: 100%;
+  height: 20%;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  width: calc(100% - 60px); 
+  position: absolute;
+  bottom: 10%;
+
+  background: url('assets/2_logo_github.png'), #2b2b2b;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: 'Spline Sans';
+  font-size: 24px;
+  color: white;
+}
+
+.repoBtn svg {
+  width: 40px;
+}
+
+/**********************/
+.contact {
+  width: stretch;
+  height: 40vh;
+  position: relative;
+  background-image: url('assets/3_bkg.png');
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.contact img {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  right: 10%;
+  top: -20%;
+  z-index: 0;
+}
+
+.contactBig {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1
+}
+
+.contactBig p {
+  font-size: 1em;
+  font-family: 'Spline Sans';
+  font-style: italic;
+  color: #808080;
+}
+
+.contactBig h1 {
+  font-family: 'Cal Sans';
+  font-size: 12em;
+  color: #c0c0c0;
+  margin-top: -30px;
+}
+
+.contactDeets {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  z-index: 1
+}
+
+.contactDeets h2 {
+  font-family: 'Spline Sans';
+  font-size: 1.5em;
+  font-weight: 200;
+  color: #c0c0c0;
+  line-height: 2em;
+}
+
+.contactDeets h2 a {
+  color: #c0c0c0;
+}
+
+.contactDeets h3 {
+  font-family: 'Spline Sans';
+  font-size: 1em;
+  font-weight: 100;
+  color: #999999;
+  margin-bottom: 20px;
+}
+
+
+/* ============================================
+   RESPONSIVE — MOBILE & TABLET
+   ============================================ */
+
+@media (max-width: 900px) {
+  .projects {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Hide the // PROJECTS label — no room and not needed on mobile */
+  .projects > nav {
+    display: none;
+  }
+}
+
+/* ------ Intro ------ */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 0 5%;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .doodleBkg {
+    width: 80vw;
+    position: relative;
+    top: auto;
+    margin-bottom: 8vw;
+  }
+
+  .doodle {
+    width: 85vw;
+    position: absolute;
+    margin-right: 0;
+    top: 18%;
+  }
+
+  .introText {
+    margin-left: 0;
+    margin-top: 0;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .introText h1 {
+    font-size: clamp(52px, 16vw, 118px);
+  }
+
+  .introText h2 {
+    position: absolute;
+    font-size: clamp(24px, 7vw, 54px);
+    text-align: right;
+    top: 20%;
+    right: 0;
+  }
+
+  .introText p {
+    font-size: clamp(18px, 5vw, 36px);
+  }
+
+  /* Bigger, tappable nav links */
+  .intro nav {
+    gap: 24px;
+    font-size: clamp(18px, 5vw, 28px);
+  }
+
+  .intro nav p {
+    cursor: pointer;
+  }
+}
+
+/* ------ Projects ------ */
+@media (max-width: 900px) {
+  .projectsWindow {
+    width: 95%;
+    height: auto;
+    min-height: 90%;
+  }
+
+  .projectsOverview {
+    flex-direction: column;
+    padding: 3% !important;
+    height: auto;
+  }
+
+  .projectsImage {
+    width: 100%;
+    height: 420px;
+  }
+
+  .projectsSummary {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .projectsSummaryLogo {
+    height: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .projectsSummaryLogo img {
+    margin-top: 0;
+    height: 130px !important;
+    width: auto !important;
+  }
+
+  .projectsSummaryDesc {
+    height: auto;
+    padding-bottom: 80px;
+  }
+
+  .projDesc {
+    font-size: 16px;
+  }
+
+  .projTag {
+    font-size: 14px;
+    min-width: 70px;
+  }
+
+  .projectsDoodle {
+    display: none;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .slide-img {
+    width: auto !important;
+    max-width: 60% !important;
+    max-height: 370px !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ------ Contact ------ */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    height: auto;
+    min-height: unset;
+    padding: 8% 5% 10%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .contact img {
+    width: 200px;
+    top: -5%;
+    right: 0;
+    opacity: 0.3;
+  }
+
+  .contactBig {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .contactBig p {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+
+  .contactBig h1 {
+    font-size: clamp(3rem, 18vw, 12em);
+    margin-top: 0;
+    line-height: 1;
+  }
+
+  .contactDeets {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
+
+  .contactDeets h2 {
+    font-size: 1.1em;
+    word-break: break-all;
+  }
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lightbox-fade-in 0.2s ease;
+  cursor: zoom-out;
+}
+
+@keyframes lightbox-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  animation: lightbox-scale-in 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+}
+
+@keyframes lightbox-scale-in {
+  from { transform: scale(0.88); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 10000;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
